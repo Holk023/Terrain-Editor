@@ -123,6 +123,11 @@ public class SettingsUI : MonoBehaviour
         TextUpdate();
     }
 
+    public void BrushSclaeUpdateAfterLoad()
+	{
+        brush.UpdateBrushScale();
+    }
+
 	public void Exit()
 	{
         Application.Quit();

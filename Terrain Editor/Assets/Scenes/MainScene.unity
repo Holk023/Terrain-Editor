@@ -8605,7 +8605,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 1
   minPlayerRadius: 0.1
-  maxPlayerRadius: 50
+  maxPlayerRadius: 100
   circleCurve:
     serializedVersion: 2
     m_Curve:

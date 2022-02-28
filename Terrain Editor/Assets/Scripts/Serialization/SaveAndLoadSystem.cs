@@ -53,6 +53,7 @@ public class SaveAndLoadSystem
         }
 
         terrain.terrainData.SetHeights(0, 0, heights);
+        settings.BrushSclaeUpdateAfterLoad();
         settings.TextUpdate();
     }
 
@@ -70,7 +71,9 @@ public class SaveAndLoadSystem
     public List<VertexSerializable> GetVertex()
     {
         List<VertexSerializable> vertexHeights = new List<VertexSerializable>();
-        var heights = terrain.terrainData.GetHeights(0, 0, (int)terrain.terrainData.heightmapHeight, (int)terrain.terrainData.heightmapWidth);
+        var heights = terrain.terrainData.GetHeights(0, 0, (int)terrain.terrainData.heightmapHeight, 
+            (int)terrain.terrainData.heightmapWidth);
+
         for (int i = 0; i < (int)terrain.terrainData.heightmapHeight; i++)
         {
             for (int j = 0; j < (int)terrain.terrainData.heightmapWidth; j++)

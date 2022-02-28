@@ -46,7 +46,7 @@ public class Brush : MonoBehaviour
 
 	public void InputUpdate()
 	{
-        if(Physics.Raycast(Camera.main.ScreenPointToRay(Input.mousePosition), out var hit, 50f ,layerMask))
+        if(Physics.Raycast(Camera.main.ScreenPointToRay(Input.mousePosition), out var hit, 100f, layerMask))
 		{
             squareBrush.position = new Vector3((int)hit.point.x, hit.point.y + +0.5f, (int)hit.point.z);
             circleBrush.position = new Vector3((int)hit.point.x, hit.point.y + +0.5f, (int)hit.point.z);

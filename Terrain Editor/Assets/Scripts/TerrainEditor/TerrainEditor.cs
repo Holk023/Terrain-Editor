@@ -71,7 +71,7 @@ public class TerrainEditor : MonoBehaviour
     {
         if (Input.GetMouseButton(0))
         {
-            if (Physics.Raycast(Camera.main.ScreenPointToRay(Input.mousePosition), out var hit, 50f, layerMask))
+            if (Physics.Raycast(Camera.main.ScreenPointToRay(Input.mousePosition), out var hit, 100f, layerMask))
             {
                 if(Vector3.Distance(player.position, hit.point) > minPlayerRadius 
                     && Vector3.Distance(player.position, hit.point) < maxPlayerRadius)
@@ -84,7 +84,7 @@ public class TerrainEditor : MonoBehaviour
 
         if (Input.GetMouseButton(1))
         {
-            if (Physics.Raycast(Camera.main.ScreenPointToRay(Input.mousePosition), out var hit, 50f , layerMask))
+            if (Physics.Raycast(Camera.main.ScreenPointToRay(Input.mousePosition), out var hit, 100f, layerMask))
             {
                 if (Vector3.Distance(player.position, hit.point) > minPlayerRadius
                     && Vector3.Distance(player.position, hit.point) < maxPlayerRadius)
